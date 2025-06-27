@@ -39,6 +39,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 The `wrangler.toml` file has been updated to include `pages_build_output_dir = ".next"` under a `[build]` section. This is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
 
+## TypeScript Configuration
+
+To resolve the `PagesFunction` type error in Cloudflare Pages Functions, the `@cloudflare/workers-types` package has been installed as a development dependency. Additionally, the `tsconfig.json` file has been updated to include these types in the `compilerOptions.types` array, ensuring proper type recognition during compilation.
+
 ## Git Initialization and Push
 
 The project has been successfully initialized as a Git repository and pushed to the remote GitHub repository: `https://github.com/qq547475331/dance.git`.
