@@ -1,7 +1,7 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
-// ../.wrangler/tmp/bundle-TEzRcu/checked-fetch.js
+// ../.wrangler/tmp/bundle-ojCCi5/checked-fetch.js
 var urls = /* @__PURE__ */ new Set();
 function checkURL(request, init) {
   const url = request instanceof URL ? request : new URL(
@@ -33,7 +33,7 @@ var onRequestPost = /* @__PURE__ */ __name(async (context) => {
   const { name, contentType } = await context.request.json();
   const key = `videos/${crypto.randomUUID()}-${name}`;
   const uploadUrl = await bucket.put(key, context.request.body, {
-    contentType
+    httpMetadata: { contentType }
     // You can add custom metadata here if needed
   }).getSignedUrl();
   return new Response(JSON.stringify({ uploadUrl, key }), {
@@ -567,7 +567,7 @@ var jsonError = /* @__PURE__ */ __name(async (request, env, _ctx, middlewareCtx)
 }, "jsonError");
 var middleware_miniflare3_json_error_default = jsonError;
 
-// ../.wrangler/tmp/bundle-TEzRcu/middleware-insertion-facade.js
+// ../.wrangler/tmp/bundle-ojCCi5/middleware-insertion-facade.js
 var __INTERNAL_WRANGLER_MIDDLEWARE__ = [
   middleware_ensure_req_body_drained_default,
   middleware_miniflare3_json_error_default
@@ -599,7 +599,7 @@ function __facade_invoke__(request, env, ctx, dispatch, finalMiddleware) {
 }
 __name(__facade_invoke__, "__facade_invoke__");
 
-// ../.wrangler/tmp/bundle-TEzRcu/middleware-loader.entry.ts
+// ../.wrangler/tmp/bundle-ojCCi5/middleware-loader.entry.ts
 var __Facade_ScheduledController__ = class ___Facade_ScheduledController__ {
   constructor(scheduledTime, cron, noRetry) {
     this.scheduledTime = scheduledTime;

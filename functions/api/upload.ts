@@ -9,7 +9,7 @@ export const onRequestPost: PagesFunction<{ R2_BUCKET: R2Bucket }> = async (cont
 
   // Generate a presigned URL for uploading the video
   const uploadUrl = await bucket.put(key, context.request.body, {
-    contentType: contentType,
+    httpMetadata: { contentType: contentType },
     // You can add custom metadata here if needed
   }).getSignedUrl();
 

@@ -45,7 +45,7 @@ To resolve the `PagesFunction` type error in Cloudflare Pages Functions, the `@c
 
 ## API Function Type Definitions
 
-To resolve the `Property 'name' does not exist on type 'unknown'` error in `functions/api/upload.ts`, an `UploadRequestBody` interface has been defined to explicitly type the expected JSON payload from `context.request.json()`. The result is now type-asserted to `UploadRequestBody` to ensure type safety.
+To resolve the `Property 'name' does not exist on type 'unknown'` error in `functions/api/upload.ts`, an `UploadRequestBody` interface has been defined to explicitly type the expected JSON payload from `context.request.json()`. The result is now type-asserted to `UploadRequestBody` to ensure type safety. Additionally, the `contentType` property in the `bucket.put` options has been correctly nested under `httpMetadata` to align with Cloudflare R2 API requirements.
 
 ## Git Initialization and Push
 
