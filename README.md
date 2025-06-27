@@ -37,8 +37,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Wrangler.toml Configuration
 
-The `wrangler.toml` file has been updated to include `pages_build_output_dir = ".next"` at the root level. This is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
+The `wrangler.toml` file has been updated to include `pages_build_output_dir = ".next"` under a `[build]` section. This is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
 
 ## Git Initialization and Push
 
 The project has been successfully initialized as a Git repository and pushed to the remote GitHub repository: `https://github.com/qq547475331/dance.git`.
+
+## Upload Page Enhancements
+
+The `src/app/upload/page.tsx` file has been enhanced to correctly handle video uploads and navigation. The `key` variable, which identifies the uploaded video, has been reintroduced. Upon successful upload, the user is now automatically redirected to the video playback page using `next/navigation`'s `useRouter` hook.
+
+## Latest Commit
+
+**Commit Message:** `feat: Implement video upload and playback navigation`
+
+This commit includes the necessary changes to enable video uploads and automatic redirection to the video playback page after a successful upload.
