@@ -43,6 +43,10 @@ The `wrangler.toml` file has been updated to include `pages_build_output_dir = "
 
 To resolve the `PagesFunction` type error in Cloudflare Pages Functions, the `@cloudflare/workers-types` package has been installed as a development dependency. Additionally, the `tsconfig.json` file has been updated to include these types in the `compilerOptions.types` array, ensuring proper type recognition during compilation.
 
+## API Function Type Definitions
+
+To resolve the `Property 'name' does not exist on type 'unknown'` error in `functions/api/upload.ts`, an `UploadRequestBody` interface has been defined to explicitly type the expected JSON payload from `context.request.json()`. The result is now type-asserted to `UploadRequestBody` to ensure type safety.
+
 ## Git Initialization and Push
 
 The project has been successfully initialized as a Git repository and pushed to the remote GitHub repository: `https://github.com/qq547475331/dance.git`.

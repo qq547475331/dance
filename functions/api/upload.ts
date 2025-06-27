@@ -1,6 +1,8 @@
+interface UploadRequestBody { name: string; contentType: string; }
+
 export const onRequestPost: PagesFunction<{ R2_BUCKET: R2Bucket }> = async (context) => {
   const bucket = context.env.R2_BUCKET;
-  const { name, contentType } = await context.request.json();
+  const { name, contentType } = await context.request.json() as UploadRequestBody;
 
   // Generate a unique key for the video
   const key = `videos/${crypto.randomUUID()}-${name}`;
