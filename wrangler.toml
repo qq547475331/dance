@@ -9,6 +9,4 @@ compatibility_date = "2023-12-18" # Use a recent compatibility date
 binding = "R2_BUCKET" # This is the name you'll use in your Pages Function to access the R2 bucket
 bucket_name = "dance" # Replace with your actual R2 bucket name
 
-[pages_build_output]
-# This is the directory where your Next.js build output will be placed
 pages_build_output_dir = ".next"
