@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Wrangler.toml Configuration
 
-The `wrangler.toml` file has been updated to include `pages_build_output_dir = ".next"` under a `[build]` section. This is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
+The `wrangler.toml` file has been updated. The `main` field, which is typically used for Workers and not Pages Functions, has been removed to avoid potential conflicts or misinterpretations during the Cloudflare Pages build process. Additionally, `type = "javascript.module"` has been added to explicitly define the module type, and `functions_directory = "functions"` has been explicitly set under the `[build]` section. This helps Cloudflare Pages correctly interpret the project structure and identify the Pages Functions. The `pages_build_output_dir = ".next"` under a `[build]` section remains, which is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
 
 ## TypeScript Configuration
 

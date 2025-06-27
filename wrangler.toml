@@ -1,5 +1,5 @@
 name = "r2-vod-frontend"
-main = "src/index.ts" # This is a placeholder, Pages Functions don't use a 'main' entry
+type = "javascript.module"
 compatibility_date = "2023-12-18" # Use a recent compatibility date
 
 [vars]
@@ -11,3 +11,4 @@ bucket_name = "dance" # Replace with your actual R2 bucket name
 
 [build]
 pages_build_output_dir = ".next"
+functions_directory = "functions"
