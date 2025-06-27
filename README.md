@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Wrangler.toml Configuration
+
+The `wrangler.toml` file has been updated to include `pages_build_output_dir = ".next"` under a `[pages_build_output]` section. This is necessary for Cloudflare Pages to correctly identify the build output directory for Next.js projects.
